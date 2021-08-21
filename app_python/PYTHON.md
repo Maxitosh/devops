@@ -2,9 +2,20 @@
 
 ## Python
 
+### Web frameworks
+
+* [**Gunicorn**](https://github.com/benoitc/gunicorn/) - is a Python WSGI HTTP Server for UNIX.
+* [Django](https://www.djangoproject.com/) - is a high-level Python Web framework that encourages rapid development and
+  clean, pragmatic design.
+* [web2py](https://www.web2py.com/) - free open source full-stack framework for rapid development of fast, scalable,
+  secure and portable database-driven web-based applications.
+* [Flask](https://palletsprojects.com/p/flask/) - is a lightweight WSGI web application framework. It is designed to
+  make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple
+  wrapper around Werkzeug and Jinja.
+
 ### Linters
 
-* [Pylint](http://pylint.pycqa.org/en/latest/) - checks for errors, tries to enforce a coding standard
+* [**Pylint**](http://pylint.pycqa.org/en/latest/) - checks for errors, tries to enforce a coding standard
 * [PyFlakes](https://github.com/PyCQA/pyflakes) - analyzes programs and detects various errors
 * [pycodestyle](https://github.com/PyCQA/pycodestyle) - checks against style conventions in PEP 8
 * [pydocstyle](https://github.com/PyCQA/pydocstyle) - checks compliance with Python docstring conventions
@@ -13,15 +24,15 @@
 
 ### Formatters and analyzers
 
-* [Black](https://github.com/psf/black) - formats Python code without compromise
+* [**Black**](https://github.com/psf/black) - formats Python code without compromise
 * [Radon](https://radon.readthedocs.io/en/latest/) - analyzes code for various metrics (lines of code, complexity, and
   so on)
 * [Isort](https://github.com/PyCQA/isort) - formats imports by sorting alphabetically and separating into sections
 
 ## Markdown
 
-* [Markdown Lint](https://github.com/DavidAnson/markdownlint) - node.js markdown linter that is easy to install and easy
-  to customize.
+* [**Markdown Lint**](https://github.com/DavidAnson/markdownlint) - node.js markdown linter that is easy to install and
+  easy to customize.
 * [mdspell](https://www.npmjs.com/package/markdown-spellcheck) - is a tool specifically for spelling checking markdown
   documents.
 * [alex](https://alexjs.com/) - catches insensitive and inconsiderate writing, it supports markdown files.
