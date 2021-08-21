@@ -1,8 +1,11 @@
+"""Gunicorn server"""
+
 from datetime import datetime
 from pytz import timezone
 
 
 def process_http_request(environ, start_response):
+    """Response current Moscow time"""
     status = '200 OK'
     response_headers = [
         ('Content-type', 'text/plain; charset=utf-8'),
