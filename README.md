@@ -2,6 +2,17 @@
 
 Simple web application written in Python with gunicorn that responses current Moscow time.
 
+## Requirements
+
+### Local
+
+* Python3 [3.9.6]
+* pip [21.1.3]
+
+### Docker
+
+* Docker [20.10.8]
+
 ## Installation
 
 ### Source code
@@ -13,28 +24,46 @@ git clone https://github.com/Maxitosh/devops
 ### Docker image
 
 #### Pull
+
 ```bash
 docker pull maxitosh/devops_web_app
 ```
 
-#### Build
+#### Build [Optional]
+
 ```bash
 git clone https://github.com/Maxitosh/devops
 cd devops/app_python
 docker build --tag maxitosh/devops_web_app .  
 ```
 
-
 ## Usage
 
 ### Source code
 
+#### Create and activate virtual environment
+
 ```bash
 cd devops/app_python
+python3 -m virtualenv venv 
+source venv/bin/activate
+```
+
+#### Install requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+#### Run application
+
+```bash
 gunicorn -b 0.0.0.0:80 server:process_http_request  
 ```
 
 ### Docker
+
+#### Run application
 
 ```bash
 docker run -p "80:80" --name devops_web_app maxitosh/devops_web_app
