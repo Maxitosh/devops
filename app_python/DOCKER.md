@@ -16,5 +16,6 @@
 * Exclude with .dockerignore - exclude files not relevant to the build, like .gitignore.
 * Don’t install unnecessary packages - to reduce complexity, dependencies, file sizes, and build times, avoid installing
   extra or unnecessary packages.
-* Minimize the number of layers
+* Minimize the number of layers - reduce build complexity.
 * Keep images small - choose an appropriate base image.
+* Rootless containers - change default _root_ user to custom one to preserve security breaches.

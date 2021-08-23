@@ -1,10 +1,21 @@
-FROM python:3.8-slim-buster
+FROM python:3.9.6-alpine3.14
 
-WORKDIR /app
+ENV VENV_PATH=/opt/venv \
+    PYTHONDONTWRITEBYTECODE=1
+ENV PATH="$VENV_PATH/bin:$PATH"
+RUN apk add --no-cache gcc musl-dev && \
+    python -m venv $VENV_PATH && \
+    adduser --disabled-password myuser -s /bin/sh -h /home/myuser
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+WORKDIR /home/myuser
 
-COPY . .
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+USER myuser
+
+EXPOSE 80
+
+COPY --chown=myuser:myuser . .
 
 CMD [ "gunicorn", "-b" , "0.0.0.0:80", "server:process_http_request "]
