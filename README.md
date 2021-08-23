@@ -41,7 +41,7 @@ docker build --tag maxitosh/devops_web_app .
 
 ### Source code
 
-#### Create and activate virtual environment
+#### 1. Create and activate virtual environment
 
 ```bash
 cd devops/app_python
@@ -49,13 +49,13 @@ python3 -m virtualenv venv
 source venv/bin/activate
 ```
 
-#### Install requirements
+#### 2. Install requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-#### Run application
+#### 3. Run application
 
 ```bash
 gunicorn -b 0.0.0.0:80 server:process_http_request  
