@@ -42,7 +42,7 @@ docker run -p "80:80" --name devops_web_app maxitosh/devops_web_app
 
 ## Test
 
-Application will be available at [127.0.0.1]()
+Application will be available at [127.0.0.1](http://127.0.0.1:80)
 
 ## Contributing
 
