@@ -30,8 +30,6 @@ jobs:
         with:
           path: ./.venv/
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
 
       - run: python3 -m venv ./.venv && . ./.venv/bin/activate && pip install -r ./app_python/requirements.txt
         if: steps.cache-venv.outputs.cache-hit != 'true'
