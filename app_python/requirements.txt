@@ -7,3 +7,4 @@ pytest-freezegun==0.4.2
 fastapi==0.68.1
 requests==2.26.0
 uvicorn==0.15.0
+flake8==3.9.2
