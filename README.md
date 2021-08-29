@@ -1,3 +1,4 @@
+[![CI to Docker Hub](https://github.com/Maxitosh/devops/actions/workflows/main.yml/badge.svg)](https://github.com/Maxitosh/devops/actions/workflows/main.yml)
 # Web application
 
 Simple web application written in Python with gunicorn that responses current Moscow time.
