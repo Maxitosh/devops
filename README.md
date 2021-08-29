@@ -1,4 +1,5 @@
 [![CI to Docker Hub](https://github.com/Maxitosh/devops/actions/workflows/build.yml/badge.svg)](https://github.com/Maxitosh/devops/actions/workflows/build.yml)
+[![Test](https://github.com/Maxitosh/devops/actions/workflows/test.yml/badge.svg)](https://github.com/Maxitosh/devops/actions/workflows/test.yml)
 
 # Web application
 
