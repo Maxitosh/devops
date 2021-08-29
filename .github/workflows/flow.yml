@@ -36,7 +36,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - run: python -m venv ./.venv && . ./.venv/bin/activate && pip install -r requirements.txt
+      - run: python -m venv ./.venv && . ./.venv/bin/activate && pip install -r /app_python/requirements.txt
         if: steps.cache.outputs.cache-hit != 'true'
 
       - name: Lint with flake8
