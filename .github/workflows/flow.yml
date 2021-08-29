@@ -36,7 +36,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - run: python -m venv ./.venv && . ./.venv/bin/activate && pip install -r /app_python/requirements.txt
+      - run: python -m venv ./.venv && . ./.venv/bin/activate && pip install -r ./app_python/requirements.txt
         if: steps.cache.outputs.cache-hit != 'true'
 
       - name: Lint with flake8
@@ -48,7 +48,7 @@ jobs:
 
       - name: Test with pytest
         run: |
-          ./.venv/bin/activate && python3 -m pytest /app_python/tests/
+          ./.venv/bin/activate && python3 -m pytest ./app_python/tests/
 
   # This workflow contains a single job called "build"
   build:
