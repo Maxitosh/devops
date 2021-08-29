@@ -1,4 +1,5 @@
-[![CI to Docker Hub](https://github.com/Maxitosh/devops/actions/workflows/main.yml/badge.svg)](https://github.com/Maxitosh/devops/actions/workflows/main.yml)
+[![CI to Docker Hub](https://github.com/Maxitosh/devops/actions/workflows/build.yml/badge.svg)](https://github.com/Maxitosh/devops/actions/workflows/build.yml)
+
 # Web application
 
 Simple web application written in Python with gunicorn that responses current Moscow time.
@@ -15,11 +16,11 @@ Simple web application written in Python with gunicorn that responses current Mo
 * Docker [20.10.8]
 
 ## Testing
+
 ```bash
 cd devops
 pytest
 ```
-
 
 ## Installation
 
