@@ -1,15 +1,10 @@
-"""Gunicorn server"""
+from fastapi import FastAPI
 
-from datetime import datetime
-from pytz import timezone
+from app_python.routers.current_time import time_router
 
+app = FastAPI(
+    title="Moscow time",
+    description="Shows current Moscow time",
+)
 
-def process_http_request(environ, start_response):
-    """Response current Moscow time"""
-    status = "200 OK"
-    response_headers = [
-        ("Content-type", "text/plain; charset=utf-8"),
-    ]
-    start_response(status, response_headers)
-    time = str(timezone("Europe/Moscow").localize(datetime.now())).encode("utf-8")
-    return [time]
+app.include_router(time_router, prefix="")

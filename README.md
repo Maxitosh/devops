@@ -44,7 +44,7 @@ docker build --tag maxitosh/devops_web_app .
 #### 1. Create and activate virtual environment
 
 ```bash
-cd devops/app_python
+cd devops
 python3 -m virtualenv venv 
 source venv/bin/activate
 ```
@@ -58,7 +58,7 @@ pip install -r requirements.txt
 #### 3. Run application
 
 ```bash
-gunicorn -b 0.0.0.0:80 server:process_http_request  
+uvicorn app_python.server:app --reload --host 0.0.0.0 --port 8000 
 ```
 
 ### Docker
@@ -66,12 +66,12 @@ gunicorn -b 0.0.0.0:80 server:process_http_request
 #### Run application
 
 ```bash
-docker run -p "80:80" --name devops_web_app maxitosh/devops_web_app
+docker run -p "8000:8000" --name devops_web_app maxitosh/devops_web_app
 ```
 
 ## Test
 
-Application will be available at [127.0.0.1](http://127.0.0.1:80)
+Application will be available at [127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## Contributing
 

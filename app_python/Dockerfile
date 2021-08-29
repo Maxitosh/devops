@@ -14,8 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 USER myuser
 
-EXPOSE 80
+EXPOSE 8000
 
-COPY --chown=myuser:myuser . .
+COPY --chown=myuser:myuser . ./app_python/
 
-CMD [ "gunicorn", "-b" , "0.0.0.0:80", "server:process_http_request "]
+CMD [ "uvicorn", "--host" , "0.0.0.0", "--port", "8000", "app_python.server:app", "--reload"]

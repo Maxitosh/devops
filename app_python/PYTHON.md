@@ -4,7 +4,7 @@
 
 ### Web frameworks
 
-* [**Gunicorn**](https://github.com/benoitc/gunicorn/) - is a Python WSGI HTTP Server for UNIX.
+* [Gunicorn](https://github.com/benoitc/gunicorn/) - is a Python WSGI HTTP Server for UNIX.
 * [Django](https://www.djangoproject.com/) - is a high-level Python Web framework that encourages rapid development and
   clean, pragmatic design.
 * [web2py](https://www.web2py.com/) - free open source full-stack framework for rapid development of fast, scalable,
@@ -12,7 +12,7 @@
 * [Flask](https://palletsprojects.com/p/flask/) - is a lightweight WSGI web application framework. It is designed to
   make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple
   wrapper around Werkzeug and Jinja.
-
+* [**FastAPI**](https://fastapi.tiangolo.com/) is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
 ### Linters
 
 * [**Pylint**](http://pylint.pycqa.org/en/latest/) - checks for errors, tries to enforce a coding standard
