@@ -13,6 +13,13 @@ Simple web application written in Python with gunicorn that responses current Mo
 
 * Docker [20.10.8]
 
+## Testing
+```bash
+cd devops
+pytest
+```
+
+
 ## Installation
 
 ### Source code
