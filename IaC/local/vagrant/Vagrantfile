@@ -1,0 +1,10 @@
+Vagrant.require_version ">= 1.3.5"
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "generic/debian10"
+  config.vm.provider "virtualbox" do |v|
+    v.name = "lab3_vm"
+    v.memory = 4096
+    v.cpus = 4
+  end
+end
