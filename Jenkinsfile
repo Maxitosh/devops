@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = "maxitosh/devops"
+        registry = "maxitosh/devops_web_app"
         app_dir = "app_python"
     }
 
