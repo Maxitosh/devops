@@ -7,7 +7,7 @@ pipeline {
     agent {
         docker {
             image 'python:3.9.6-alpine3.14'
-            args '-u 0 -v $DOCKER_HOST:/var/run/docker.sock'
+            args '-u 0 -v /var/run/docker.sock:$DOCKER_HOST'
         }
     }
     stages {
