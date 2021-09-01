@@ -19,7 +19,7 @@ pipeline {
 
         stage('Install packages') {
             steps {
-                sh 'apk add gcc musl-dev'
+                sh 'apk add gcc musl-dev docker'
             }
         }
 
