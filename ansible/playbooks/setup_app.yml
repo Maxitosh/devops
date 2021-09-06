@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: ubuntu
+
+  roles:
+    - role: docker_install
+      become: true
+      vars:
+        docker_users:
+          - "{{ ansible_user_id }}"
