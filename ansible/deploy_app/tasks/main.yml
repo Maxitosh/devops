@@ -1,0 +1,25 @@
+---
+- name: Ensure directory for app
+  become: true
+  file:
+    owner: "{{ ansible_user_id }}"
+    path: /opt/python_app/
+    state: directory
+    mode: 0755
+
+- name: Copy docker-compose
+  template:
+    src: docker-compose.yml.template
+    dest: /opt/python_app/docker-compose.yml
+
+
+- name: Run docker-compose
+  become: true
+  community.docker.docker_compose:
+    pull: true
+    recreate: always
+    state: present
+    project_src: /opt/python_app/
+  environment:
+    TAG: "{{ python_app_tag }}"
+    OUTER_PORT: "{{python_app_port}}"
