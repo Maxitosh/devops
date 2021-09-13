@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
 from app_python.routers.current_time import time_router
+from app_python.routers.metrics import metrics_router
 
 app = FastAPI(
     title="Moscow time",
@@ -8,3 +9,4 @@ app = FastAPI(
 )
 
 app.include_router(time_router, prefix="")
+app.include_router(metrics_router, prefix="")
