@@ -31,7 +31,7 @@ jobs:
         id: cache-venv
         with:
           path: ./.venv/
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ secrets.CACHE_VERSION }}-${{ hashFiles('**/requirements.txt') }}
 
       - name: Install dependencies
         run: python3 -m venv ./.venv && . ./.venv/bin/activate && pip install -r ./app_python/requirements.txt
