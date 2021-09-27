@@ -45,6 +45,12 @@ spec:
             httpGet:
               path: /
               port: http
+          env:
+            - name: MY_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: credentials
+                  key: password
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
