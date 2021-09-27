@@ -82,6 +82,8 @@ docker run -p "8000:8000" --name devops_web_app maxitosh/devops_web_app
 
 Application will be available at [127.0.0.1:8000](http://127.0.0.1:8000)
 
+Visits list is available at [http://127.0.0.1:8000/visits](http://127.0.0.1:8000/visits)
+
 ## Contributing
 
 Pull requests are welcome.

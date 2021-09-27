@@ -53,6 +53,14 @@ spec:
                   key: password
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: config
+              mountPath: {{ .Values.configPath }}
+              readOnly: true
+      volumes:
+        - name: config
+          configMap:
+            name: {{ include "devops-web-app-chart.fullname" . }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

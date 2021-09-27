@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "devops-web-app-chart.fullname" . }}
+  labels:
+    {{- include "devops-web-app-chart.labels" . | nindent 4 }}
+data:
+{{ (.Files.Glob "files/configs/*").AsConfig | indent 2 }}
