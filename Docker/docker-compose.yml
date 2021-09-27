@@ -22,4 +22,6 @@ services:
       - "8000:8000"
     networks:
       - app
+    volumes:
+      - ./media:/home/myuser/app_python/media
     <<: *defaults
